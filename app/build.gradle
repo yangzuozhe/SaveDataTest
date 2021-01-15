@@ -5,6 +5,14 @@ android {
     buildToolsVersion "30.0.1"
 
     defaultConfig {
+
+        compileOptions {
+
+            sourceCompatibility JavaVersion.VERSION_1_8
+
+            targetCompatibility JavaVersion.VERSION_1_8
+
+        }
         applicationId "com.example.savedatatest"
         minSdkVersion 21
         targetSdkVersion 30
@@ -29,5 +37,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
 
 }
