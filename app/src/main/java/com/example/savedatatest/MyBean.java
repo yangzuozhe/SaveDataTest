@@ -36,4 +36,13 @@ public class MyBean {
     public void setSex(String sex) {
         this.sex = sex;
     }
+
+    @Override
+    public String toString() {
+        return "MyBean{" +
+                "name='" + name + '\'' +
+                ", pass='" + pass + '\'' +
+                ", sex='" + sex + '\'' +
+                '}';
+    }
 }
