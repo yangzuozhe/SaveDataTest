@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -35,6 +36,7 @@ public class JsonActivity extends AppCompatActivity {
     public void onclick(View v) {
         if (v.getId() == R.id.btnLoad) {
             ArrayList<MyBean> list = JsonToFileHelper.load(JsonActivity.this, "hahaha");
+            Toast.makeText(JsonActivity.this,list.toString(),Toast.LENGTH_LONG).show();
             for (MyBean bean : list){
                 Log.d(TAG, bean.getName());
             }
