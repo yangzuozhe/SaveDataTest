@@ -4,9 +4,23 @@
     package="com.example.savedatatest"
     tools:ignore="ProtectedPermissions">
     <!-- 在SDCard中创建与删除文件权限 -->
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" /> <!-- 往SDCard写入数据权限 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
+<!--    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" /> &lt;!&ndash; 往SDCard写入数据权限 &ndash;&gt;-->
+<!--    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+<!--    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />-->
+
+    <!--网络通信权限-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!--SD卡写入数据权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!--SD卡创建与删除权限-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!--VISIBILITY_HIDDEN表示不显示任何通知栏提示的权限-->
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <!--DownloadManager-->
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+<!--    在清单文件中注册Service-->
+    <!--版本更新服务-->
+
 
     <application
         android:allowBackup="true"
@@ -15,14 +29,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".JsonActivity">
+        <activity android:name=".DownLoadActivity">
+
+        </activity>
+        <activity android:name=".SdActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SdActivity">
+        <activity android:name=".JsonActivity">
 
         </activity>
         <activity android:name=".MainActivity"></activity>
